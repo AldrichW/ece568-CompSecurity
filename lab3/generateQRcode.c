@@ -21,6 +21,7 @@ size_t from_hex_string(char *s, size_t size, uint8_t *binary, size_t max){
   size_t len = size;
 
   int i;
+  int j;
   for( i = 0, j = 0; j < len; i += 2, j++){
     uint8_t b1, b2;
     b1 = s[i] - '0';
