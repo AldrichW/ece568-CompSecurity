@@ -22,13 +22,14 @@ size_t from_hex_string(char *s, size_t size, uint8_t *binary, size_t max){
 
   int i;
   int j;
+  size_t k;
   for( i = 0, j = 0; j < len; i += 2, j++){
     uint8_t b1, b2;
     b1 = s[i] - '0';
     b2 = s[i+1] - '0';
     binary[ j ] = 16 * b1 + b2;
   }
-  for(size_t k = len; k < max; k++){
+  for(k = len; k < max; k++){
     binary[ k ] = 0;
   }  
 
