@@ -20,14 +20,15 @@ size_t from_hex_string(char *s, size_t size, uint8_t *binary, size_t max){
 
   size_t len = size;
 
-  for(int i = 0, j = 0; j < len; i += 2, j++){
+  int i;
+  for( i = 0, j = 0; j < len; i += 2, j++){
     uint8_t b1, b2;
     b1 = s[i] - '0';
     b2 = s[i+1] - '0';
     binary[ j ] = 16 * b1 + b2;
   }
-  for(size_t i = len; i < max; i++){
-    binary[ i ] = 0;
+  for(size_t k = len; k < max; k++){
+    binary[ k ] = 0;
   }  
 
   return len;
