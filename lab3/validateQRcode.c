@@ -18,7 +18,7 @@
 size_t from_hex_string(char *s, size_t size, uint8_t *binary, size_t max){
 
   if(2 * max < size){
-    return -1;
+    return -1;	//Not enough space for the result buffer given the hex size
   }  
 
   size_t len = size;
